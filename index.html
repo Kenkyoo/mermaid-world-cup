@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mermaid JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Un diagrama dibujado enteramente con <a href="https://github.com/mermaid-js/mermaid" target="_blank">Mermaid</a> que muestra las instancias finales de la Copa Mundial 2022</h2>
+
+    <div class="container">
+
+        <pre class="mermaid">
+            graph TD;
+
+            %% Octavos de final
+
+            A1["Paises Bajos"] --> Q1["Paises Bajos"];
+            A2["Estados Unidos"] --> Q1;
+        
+            A3["Argentina"] --> Q2["Argentina"];
+            A4["Australia"] --> Q2;
+        
+            A5["Croacia"] --> Q3["Croacia"];
+            A6["Japon"] --> Q3;
+        
+            A7["Brasil"] --> Q4["Brasil"];
+            A8["Corea del sur"] --> Q4;
+
+            %% Cuartos de final
+
+            Q1 --> S1["Argentina"];
+            Q2 --> S1;
+        
+            Q3 --> S2["Croacia"];
+            Q4 --> S2;
+
+            %% Semifinales
+
+            S1 --> F1["Argentina"];
+            S2 --> F1;
+
+            %% Final
+            F1 --> W["Argentina"];
+
+        </pre>
+
+        <pre class="mermaid">
+            graph BT;
+
+            %% Octavos de final
+
+            A1["Francia"] --> Q1["Francia"];
+            A2["Polonia"] --> Q1;
+  
+            A3["Portugal"] --> Q2["Portugal"];
+            A4["Suiza"] --> Q2;
+  
+            A5["Inglaterra"] --> Q3["Inglaterra"];
+            A6["Senegal"] --> Q3;
+  
+            A7["Marruecos"] --> Q4["Marruecos"];
+            A8["España"] --> Q4;
+
+            %% Cuartos de final
+
+            Q1 --> S1["Francia"];
+            Q2 --> S1;
+    
+            Q3 --> S2["Marruecos"];
+            Q4 --> S2;
+
+            %% Semifinales
+
+            S1 --> F1["Francia"];
+            S2 --> F1;
+        </pre>
+
+    </div>
+
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+          securityLevel: 'loose',
+          theme: 'forest',
+        });
+    </script>
+
+</body>
+</html>
